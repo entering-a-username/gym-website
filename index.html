@@ -1,66 +1,61 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" id="htmlID">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="output.css">
-    <script defer src="script.js"></script>
 </head>
-<body class="bg-[#f7f5fc] relative">
+<body class="bg-[#f7f5fc] relative dark:bg-slate-800">
 
-
+    <!-- choose other colros for datk mode -->
     <!-- different font, different colors? -->
 
-    <nav class="flex justify-between items-center py-5 border-b-2">
+    <nav class="md:hidden flex justify-between items-center py-5 border-b-2 dark:border-slate-900">
         <!-- animated underline on hover -->
-        <a href="#" class="ml-10 underline text-[#a2357e] font-semibold text-lg">Join Us</a>
+        <a href="#" class="ml-10 underline text-[#a2357e] dark:text-[#aa859e] font-semibold text-lg">Join Us</a>
        
-        <div class="text-[#6a547c] font-semibold text-xl tracking-wide">GYM</div>
+        <div class="text-[#6a547c] font-semibold text-xl tracking-wide dark:text-[#bb9cd4]">GYM</div>
 
         <div id="openMenuID" class="flex flex-col mr-8 cursor-pointer gap-1">
-            <div class="bg-[#a2357e] w-8 h-1"></div>
-            <div class="bg-[#a2357e] w-8 h-1"></div>
-            <div class="bg-[#a2357e] w-8 h-1"></div>
+            <div class="bg-[#a2357e] dark:bg-[#aa859e] w-8 h-1"></div>
+            <div class="bg-[#a2357e] dark:bg-[#aa859e] w-8 h-1"></div>
+            <div class="bg-[#a2357e] dark:bg-[#aa859e] w-8 h-1"></div>
         </div>
 
     </nav>
-
+    <!-- how to stay on dark mode when switching pages -->
     <!-- hamburger menu on click, change bg color, add animations to menu popup -->
 
-    <div id="menuID" class=" top-0 right-0 text-white flex flex-col justify-around items-center bg-[#6a547c] absolute h-screen w-[60%]">
+    <div id="menuID" class="hidden top-0 right-0 text-white flex flex-col justify-around items-center bg-[#6a547c] dark:bg-[#331d45] absolute h-screen w-[60%]">
         <!-- absolute makes them centered??? -->
-        <div id="closeMenuID" class="absolute top-8 right-10 cursor-pointer">
-            <div class="bg-black w-6 h-1 absolute rotate-45"></div>
-            <div class="bg-black w-6 h-1 absolute -rotate-45"></div>
+        <div id="closeMenuID" class="absolute top-8 right-14 cursor-pointer">
+            <div class="bg-black dark:bg-white w-6 h-1 absolute rotate-45"></div>
+            <div class="bg-black dark:bg-white w-6 h-1 absolute -rotate-45"></div>
         </div>
-        <div class="text-black text-5xl font-semibold tracking-wide mt-10">GYM</div>
+        <img id="moonID" class="absolute top-0 -left-28 cursor-pointer w-6 h-6 mt-6 ml-36" src="/img/halfmoon.png" alt="dark/light mode">
+        
+        <div class="text-black text-5xl font-semibold tracking-wide mt-10 dark:text-white">GYM</div>
         
         <!-- underline animation -->
         <ul class="flex flex-col gap-4 text-xl font-semibold">
-            <a href="" class="hover:underline"><li>HOME</li></a>
-            <a href="" class="hover:underline"><li>TRAINING</li></a>
-            <a href="" class="hover:underline"><li>SHOP</li></a>
-            <a href="" class="hover:underline"><li>ABOUT</li></a>
-            <a href="" class="hover:underline"><li>CONTACT</li></a>
+            <a href="index.html" class="hover:underline"><li>HOME</li></a>
+            <a href="#" class="hover:underline"><li>TRAINING</li></a>
+            <a href="#" class="hover:underline"><li>SHOP</li></a>
+            <a href="#" class="hover:underline"><li>ABOUT</li></a>
+            <a href="#" class="hover:underline"><li>CONTACT</li></a>
         </ul>
 
         <!-- animation on hover button -->
-        <div class="mb-20">
-            <div class="flex flex-col sm:flex-row gap-3">
-                <button class="bg-[#a2357e] px-4 py-1.5 font-semibold border-[#a2357e] border rounded-sm">Log In</button>
-                <button class="bg-[#e9e8e8] text-black px-4 py-1.5 font-semibold border-white border rounded-sm">Join Us</button>
-            </div>
-            <img id="moonID" class="cursor-pointer w-6 h-6 mt-6 ml-36" src="img/halfmoon.png" alt="dark/light mode">
+        <div class="flex flex-col sm:flex-row gap-3 mb-20">
+            <button class="bg-[#a2357e] px-16 py-1.5 font-semibold border-[#a2357e] border rounded-sm">Log In</button>
+            <button class="bg-[#e9e8e8] text-black px-16 py-1.5 font-semibold border-white border rounded-sm">Join Us</button>
         </div>
     </div>
 
-
-    <!--
-
-
-        <div>GYM</div>
+    <nav class="md:flex hidden justify-between items-center py-5 border-b-2 dark:border-slate-900">
+        <div class="ml-10">GYM</div>
 
         <div>
             <ul class="flex gap-4">
@@ -72,15 +67,27 @@
             </ul>
         </div>
 
-        <div class="flex gap-4">
-            <img class="w-10 h-10" src="img/halfmoon.png" alt="dark/light mode">
+        <div class="flex gap-4 mr-8">
+            <img class="w-5 h-5" src="img/halfmoon.png" alt="dark/light mode">
             <button>Log In</button>
             <button>Join Us</button>
         </div>
-    -->
+
+    </nav>
+
 
 
 
     
+    
+    <script src="script.js">
+        function changeImage() {
+            if (document.getElementById("moonID").src == '/img/halfmoon.png') {
+                document.getElementById("moonID").src = '/img/fullmoon.png'
+            } else {
+                document.getElementById("moonID").src = '/img/halfmoon.png'
+            }
+        }
+    </script>
 </body>
 </html>
