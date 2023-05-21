@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="output.css">
+    <script defer src="script.js"></script>
+</head>
+<body class="bg-[#f7f5fc] relative">
+
+
+    <!-- different font, different colors? -->
+
+    <nav class="flex justify-between items-center py-5 border-b-2">
+        <!-- animated underline on hover -->
+        <a href="#" class="ml-10 underline text-[#a2357e] font-semibold text-lg">Join Us</a>
+       
+        <div class="text-[#6a547c] font-semibold text-xl tracking-wide">GYM</div>
+
+        <div id="openMenuID" class="flex flex-col mr-8 cursor-pointer gap-1">
+            <div class="bg-[#a2357e] w-8 h-1"></div>
+            <div class="bg-[#a2357e] w-8 h-1"></div>
+            <div class="bg-[#a2357e] w-8 h-1"></div>
+        </div>
+
+    </nav>
+
+    <!-- hamburger menu on click, change bg color, add animations to menu popup -->
+
+    <div id="menuID" class=" top-0 right-0 text-white flex flex-col justify-around items-center bg-[#6a547c] absolute h-screen w-[60%]">
+        <!-- absolute makes them centered??? -->
+        <div id="closeMenuID" class="absolute top-8 right-10 cursor-pointer">
+            <div class="bg-black w-6 h-1 absolute rotate-45"></div>
+            <div class="bg-black w-6 h-1 absolute -rotate-45"></div>
+        </div>
+        <div class="text-black text-5xl font-semibold tracking-wide mt-10">GYM</div>
+        
+        <!-- underline animation -->
+        <ul class="flex flex-col gap-4 text-xl font-semibold">
+            <a href="" class="hover:underline"><li>HOME</li></a>
+            <a href="" class="hover:underline"><li>TRAINING</li></a>
+            <a href="" class="hover:underline"><li>SHOP</li></a>
+            <a href="" class="hover:underline"><li>ABOUT</li></a>
+            <a href="" class="hover:underline"><li>CONTACT</li></a>
+        </ul>
+
+        <!-- animation on hover button -->
+        <div class="mb-20">
+            <div class="flex flex-col sm:flex-row gap-3">
+                <button class="bg-[#a2357e] px-4 py-1.5 font-semibold border-[#a2357e] border rounded-sm">Log In</button>
+                <button class="bg-[#e9e8e8] text-black px-4 py-1.5 font-semibold border-white border rounded-sm">Join Us</button>
+            </div>
+            <img id="moonID" class="cursor-pointer w-6 h-6 mt-6 ml-36" src="img/halfmoon.png" alt="dark/light mode">
+        </div>
+    </div>
+
+
+    <!--
+
+
+        <div>GYM</div>
+
+        <div>
+            <ul class="flex gap-4">
+                <a href=""><li>HOME</li></a>
+                <a href=""><li>TRAINING</li></a>
+                <a href=""><li>SHOP</li></a>
+                <a href=""><li>ABOUT</li></a>
+                <a href=""><li>CONTACT</li></a>
+            </ul>
+        </div>
+
+        <div class="flex gap-4">
+            <img class="w-10 h-10" src="img/halfmoon.png" alt="dark/light mode">
+            <button>Log In</button>
+            <button>Join Us</button>
+        </div>
+    -->
+
+
+
+    
+</body>
+</html>
