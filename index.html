@@ -7,14 +7,11 @@
     <title>Document</title>
     <link rel="stylesheet" href="output.css">
 </head>
-<body class="bg-[#f7f5fc] relative dark:bg-slate-800">
+<body class="bg-slate-200 relative dark:bg-slate-800">
 
-    <!-- choose other colros for datk mode -->
-    <!-- different font, different colors? -->
-
-    <nav class="md:hidden flex justify-between items-center py-5 border-b-2 dark:border-slate-900">
+    <nav class="md:hidden flex justify-between items-center py-5 border-b-2 border-slate-300 dark:border-slate-900">
         <!-- animated underline on hover -->
-        <a href="#" class="ml-10 underline text-[#a2357e] dark:text-[#aa859e] font-semibold text-lg">Join Us</a>
+        <a href="#" id="link" class="ml-10 underline text-[#a2357e] dark:text-[#aa859e] font-semibold text-lg hover:">Join Us</a>
        
         <div class="text-[#6a547c] font-semibold text-xl tracking-wide dark:text-[#bb9cd4]">GYM</div>
 
@@ -27,8 +24,8 @@
     </nav>
     <!-- how to stay on dark mode when switching pages -->
     <!-- hamburger menu on click, change bg color, add animations to menu popup -->
-
-    <div id="menuID" class="hidden top-0 right-0 text-white flex flex-col justify-around items-center bg-[#6a547c] dark:bg-[#331d45] absolute h-screen w-[60%]">
+    <!-- hide when screen lg -->
+    <div id="menuID" class="hidden z-40 top-0 right-0 text-white flex flex-col justify-around items-center bg-slate-300 dark:bg-[#331d45] absolute h-screen w-[60%]">
         <!-- absolute makes them centered??? -->
         <div id="closeMenuID" class="absolute top-8 right-14 cursor-pointer">
             <div class="bg-black dark:bg-white w-6 h-1 absolute rotate-45"></div>
@@ -39,7 +36,7 @@
         <div class="text-black text-5xl font-semibold tracking-wide mt-10 dark:text-white">GYM</div>
         
         <!-- underline animation -->
-        <ul class="flex flex-col gap-4 text-xl font-semibold">
+        <ul class="flex flex-col gap-4 text-xl text-black font-semibold">
             <a href="index.html" class="hover:underline"><li>HOME</li></a>
             <a href="#" class="hover:underline"><li>TRAINING</li></a>
             <a href="#" class="hover:underline"><li>SHOP</li></a>
@@ -48,46 +45,108 @@
         </ul>
 
         <!-- animation on hover button -->
-        <div class="flex flex-col sm:flex-row gap-3 mb-20">
-            <button class="bg-[#a2357e] px-16 py-1.5 font-semibold border-[#a2357e] border rounded-sm">Log In</button>
-            <button class="bg-[#e9e8e8] text-black px-16 py-1.5 font-semibold border-white border rounded-sm">Join Us</button>
+        <div class="flex flex-col sm:flex-row gap-3 mb-20 text-black">
+            <button class="bg-yellow-50 px-16 py-1.5 font-semibold border-black border-b-2 border-r-2 rounded-lg">Log In</button>
+            <button class="bg-[#e9e8e8] px-16 py-1.5 font-semibold border-black border-b-2 border-r-2 rounded-lg">Join Us</button>
         </div>
     </div>
 
-    <nav class="md:flex hidden justify-between items-center py-5 border-b-2 dark:border-slate-900">
-        <div class="ml-10">GYM</div>
+    <nav class="hidden md:flex justify-between items-center py-5 border-b-2 border-slate-300 dark:border-slate-900">
+        <div class="ml-16 text-[#6a547c] font-semibold text-xl">GYM</div>
 
         <div>
-            <ul class="flex gap-4">
-                <a href=""><li>HOME</li></a>
-                <a href=""><li>TRAINING</li></a>
-                <a href=""><li>SHOP</li></a>
-                <a href=""><li>ABOUT</li></a>
-                <a href=""><li>CONTACT</li></a>
+            <ul class="flex lg:gap-10 gap-4 text-[#4b3851] font-semibold">
+                <a href="" class=""><li>HOME</li></a>
+                <a href="" class=""><li>TRAINING</li></a>
+                <a href="" class=""><li>SHOP</li></a>
+                <a href="" class=""><li>ABOUT</li></a>
+                <a href="" class=""><li>CONTACT</li></a>
             </ul>
         </div>
 
         <div class="flex gap-4 mr-8">
-            <img class="w-5 h-5" src="img/halfmoon.png" alt="dark/light mode">
-            <button>Log In</button>
-            <button>Join Us</button>
+            <img id="moonID" class="w-5 h-5 mt-2 cursor-pointer" src="img/halfmoon.png" alt="dark/light mode">
+            <button class="lg:hidden font-semibold border border-black px-3 py-1 rounded-lg hover:bg-black hover:text-white hover:duration-1000">Join Us</button>
+            <button class="hidden lg:inline-block bg-rose-300 font-semibold border border-black px-3 py-0.5 rounded-lg hover:bg-rose-200 hover:duration-500">Log In</button>
+            <button class="hidden lg:inline-block text-black font-semibold border border-black px-3 py-0.5 rounded-lg hover:bg-black hover:text-white hover:duration-1000">Join Us</button>
         </div>
-
+<!-- maybe droplet of water effct -->
     </nav>
 
 
 
 
+    <header class="flex flex-col items-center md:flex-row">
+        <!-- fix this -->
+        <div class="flex flex-col px-16 lg:ml-20 relative items-center lg:w-[800px]">
+            <!-- i dont like this message CHANGE -->
+            <!-- fix the span element -->
+            <div class="relative">
+                <h1 class="text-7xl text-center pt-16 lg:text-8xl">Find Your </h1>
+                <h1 class="text-7xl text-center pt-5 pr-52 lg:text-8xl">Best<span class="absolute bg-gradient-to-tr text-white from-rose-400 to-purple-400 rounded-xl px-3 rotate-[15deg] ">GYM</span></h1>
+                <h1 class="text-7xl text-center pt-5 lg:text-8xl"> Teacher</h1>
+            </div>
+
+            <div class="md:px-20 lg:px-32"><p class="pt-8 text-center">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Placeat deserunt quos ipsam, amet corporis impedit voluptas ea.</p>
+            </div>
+            <div class="mt-6 text-white font-semibold">
+                <button class="bg-gradient-to-r from-rose-400 to-purple-400 rounded-3xl text-2xl px-16 py-3">Get Started</button>
+            </div>
+            <div class="flex gap-7 mt-6 text-center">
+                <div class="flex flex-col gap-1">
+                    <span class="text-3xl font-semibold">2000+</span>
+                    <span>Clubs Wordlwide</span>
+                </div>
+                <div class="flex flex-col gap-1">
+                    <span class="text-3xl font-semibold">500+</span>
+                    <span>Participants</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="max-md:mt-4">
+            <img class="max-md:w-[400px] max-lg:w-[800px] lg:w-[500px]" src="/img/header_pic.png" alt="">
+        </div>
+
+
+
+
+    </header>
+
+    <!-- MAKE IT FLeX BEFOrE LG AND AFTER MD -->
+
+    <div class="mt-10 lg:flex lg:mt-12 lg:items-center">
+        <div class="hidden lg:inline-block"><img src="/img/pic_1.png" alt=""></div>
+        <div class="text-center px-8 md:px-20 xl:px-32">
+            <h1>With our membership, you can use any of our 2000+ locations, bring a guest for free and relax in our exclusive spa!</h1>
+            <div class="flex items-center gap-3 mt-3 cursor-pointer">
+                <a href="" class="font-semibold text-purple-800 hover:underline">Learn more about our membership exclusive spa</a>
+                <div class="relative">
+                    <div class="w-4 h-0.5 bg-purple-800 absolute top-0.5 "></div>
+                    <div class="w-2.5 h-0.5 bg-purple-800 ml-5 rotate-[30deg] top-0 absolute"></div>
+                    <div class="w-2.5 h-0.5 bg-purple-800 ml-5 -rotate-[30deg] top-1 absolute"></div>
+                </div>
+            </div>
+        </div>
+        <div class="mt-2 lg:hidden"><img src="/img/pic_1.png" alt=""></div>
+
+
+
+    </div>
+
+
+
+
+
+
     
-    
-    <script src="script.js">
-        function changeImage() {
-            if (document.getElementById("moonID").src == '/img/halfmoon.png') {
-                document.getElementById("moonID").src = '/img/fullmoon.png'
-            } else {
-                document.getElementById("moonID").src = '/img/halfmoon.png'
-            }
-        }
-    </script>
+    <div>
+        <h1>find a gym near you</h1>
+    </div>
+
+
+
+
+    <script src="script.js"></script>
 </body>
 </html>
