@@ -9,7 +9,7 @@
 </head>
 <body class="bg-slate-200 relative dark:bg-slate-800">
 
-    <nav class="md:hidden flex justify-between items-center py-5 border-b-2 border-slate-300 dark:border-slate-900">
+    <nav class="sticky z-30 bg-slate-200 top-0 md:hidden flex justify-between items-center py-5 border-b-2 border-slate-300 dark:border-slate-900">
         <!-- animated underline on hover -->
         <a href="#" id="link" class="ml-10 underline text-[#a2357e] dark:text-[#aa859e] font-semibold text-lg hover:">Join Us</a>
        
@@ -51,7 +51,7 @@
         </div>
     </div>
 
-    <nav class="hidden md:flex justify-between items-center py-5 border-b-2 border-slate-300 dark:border-slate-900">
+    <nav class="sticky z-50 bg-slate-200 top-0 hidden md:flex justify-between items-center py-5 border-b-2 border-slate-300 dark:border-slate-900">
         <div class="ml-16 text-[#6a547c] font-semibold text-xl">GYM</div>
 
         <div>
@@ -173,14 +173,12 @@
     </div>
 
 
-    <div class="mt-52 relative outline flex flex-col justify-center items-center text-center px-2">
+    <div class="mt-52 relative flex flex-col justify-center items-center text-center px-2">
 
-
-        
-        <div class="flex flex-col items-center justify-center px-10 text-center">
-            <h1 class="text-5xl pt-10">Anytime, Any Place, Any Workout</h1>
-            <p class="mt-10">Our videos let you do your exercises at your chosen time with maximum help from our professional trainers!</p>
-            <button class="mt-8 bg-gradient-to-r font-semibold text-white flex justify-center items-center gap-4 from-rose-400 to-purple-400 rounded-3xl text-2xl pl-12 pr-16 py-3">EXPLORE
+        <div class="flex flex-col items-center justify-center mt-10 gap-12 md:gap-16 xl:px-96 px-10 md:px-36 text-center">
+            <h1 class="text-6xl">Anytime, Any Place, Any Workout</h1>
+            <p class="">Our videos let you do your exercises at your chosen time with maximum help from our professional trainers!</p>
+            <button class="bg-gradient-to-r font-semibold text-white flex justify-center items-center gap-4 from-rose-400 to-purple-400 rounded-3xl text-2xl pl-12 pr-16 py-3">EXPLORE
                 <div class="relative">
                     <div class="w-4 h-0.5 bg-purple-800 absolute top-0.5 "></div>
                     <div class="w-2.5 h-0.5 bg-purple-800 ml-5 rotate-[30deg] top-0 absolute"></div>
@@ -189,55 +187,46 @@
             </button>
         </div>
 
-
-        <img class="absolute w-[30%] top-0 right-0 rotate-[20deg] rounded-l-full rounded-r-full" src="img/pic_5.jpg" alt="">
-        <img class="absolute w-[30%] top-0 left-0 -rotate-[20deg] rounded-l-full rounded-r-full" src="img/pic_6.jpg" alt="">
-        <img class="absolute w-[30%] bottom-0 left-0 rotate-[20deg] rounded-l-full rounded-r-full" src="img/pic_7.jpg" alt="">
-        <img class="absolute w-[30%] bottom-0 right-0 -rotate-[20deg] rounded-l-full rounded-r-full" src="img/pic_8.jpg" alt="">
+ <!-- calc function here? -->
+        <img class="max-md:hidden absolute w-[250px] h-[120px] lg:w-[350px] lg:h-[168px] -z-10 -top-16 right-0 lg:right-7 rotate-[20deg] rounded-l-full rounded-r-full" src="img/pic_5.jpg" alt="">
+        <img class="max-md:hidden absolute w-[250px] h-[120px] lg:w-[350px] lg:h-[168px] -z-10 -top-16 left-0 lg:left-7 -rotate-[20deg] rounded-l-full rounded-r-full" src="img/pic_6.jpg" alt="">
+        <img class="max-md:hidden absolute w-[250px] h-[120px] lg:w-[350px] lg:h-[168px] -z-10 -bottom-16 left-0 lg:left-7 rotate-[20deg] rounded-l-full rounded-r-full" src="img/pic_7.jpg" alt="">
+        <img class="max-md:hidden absolute w-[250px] h-[120px] lg:w-[350px] lg:h-[168px] -z-10 -bottom-16 right-0 lg:right-7 -rotate-[20deg] rounded-l-full rounded-r-full" src="img/pic_8.jpg" alt="">
     </div
 
+<!-- ?????????????????? -->
 
-
-
-
-
-
-
-    <div class="h-[6000px]">HEOYOOOO
-        <!-- FOLLOW US -->
+    <div class="flex items-center justify-center mt-72">
+        <div class="w-[90%] md:w-[600px] lg:w-[800px] flex flex-col justify-center items-center gap-12 bg-gradient-to-r from-rose-400 to-purple-400 rounded-md">
+            <h1 class="font-semibold text-white text-3xl pt-7">Join our newsletter</h1>
+            <p class="text-center px-5 md:px-10 font-semibold text-white">Subscribe to our newletter to be aware of many things on discounts, gifts, training and much more. Just enter your email!</p>
+            <div class="mb-16 relative w-[70%]">
+                <input class="w-[100%] h-[70px] rounded-3xl pl-5 text-lg" type="text">
+                <button class="absolute top-4 right-4 bg-gradient-to-r font-semibold text-white flex justify-center items-center gap-4 from-rose-400 to-purple-400 rounded-3xl text-lg pl-8 pr-12 py-2">EXPLORE
+                    <div class="relative">
+                        <div class="w-4 h-0.5 bg-white absolute top-0.5 "></div>
+                        <div class="w-2.5 h-0.5 bg-white ml-5 rotate-[30deg] top-0 absolute"></div>
+                        <div class="w-2.5 h-0.5 bg-white ml-5 -rotate-[30deg] top-1 absolute"></div>
+                    </div>
+                </button>
+            </div>
+        </div>
     
-    
-
     </div>
 
-
-
-<!-- DIET SECTION? -->
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    
-    <div>
+    <div class="bg-red-800 mt-96">
         <h1>find a gym near you</h1>
     </div>
 
 
 
+    <footer class="h-[500px] bg-[#1b0543]">
+
+    </footer>
+
+
+
+<!-- FOLLOW US, DIET SECTION, cXELI XAIZ -->
 
     <script src="script.js"></script>
 </body>

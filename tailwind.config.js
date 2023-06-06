@@ -2,7 +2,11 @@
 module.exports = {
   content: ["index.html", "script.js"],
   theme: {
-    extend: {},
+    extend: {
+      zIndex: {
+        '70': '70',
+      }
+    },
   },
   plugins: [],
   darkMode: 'class'
