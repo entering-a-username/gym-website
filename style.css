@@ -3,7 +3,8 @@
 @tailwind utilities;
 
 
-.dark {
-    color: #f8eece
-}
 
+
+.btn {
+    @apply bg-gradient-to-r from-rose-400 to-purple-400 rounded-3xl text-2xl px-16 py-3 hover:bg-gradient-to-r hover:from-purple-400 hover:to-rose-400 hover:duration-1000
+}
